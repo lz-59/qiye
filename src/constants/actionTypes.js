@@ -1,0 +1,8 @@
+export const FETCH_LOGIN = 'FETCH_LOGIN'
+export const FETCH_REG = 'FETCH_REG'
+export const FETCH_HOME_DED = 'FETCH_HOME_DED'
+export const FETCH_HOME_DEL = 'FETCH_HOME_DEL'
+export const FETCH_HOME_TAG = 'FETCH_HOME_TAG'
+export const FETCH_HOME_ADD = 'FETCH_HOME_ADD'
+export const FETCH_HOME_UPD = 'FETCH_HOME_UPD'
+export const FETCH_HOME_TAG_DEL = 'FETCH_HOME_TAG_DEL'
