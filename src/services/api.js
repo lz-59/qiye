@@ -5,4 +5,5 @@ export default {
   delete: '/api/index.php/home/v5/deleteUser', 
   add: '/api/index.php/home/v5/add', 
   upd: '/api/index.php/home/v5/updateUser',
+  page: 'https://blogs.zdldove.top/Home/Apis/listWithPage',
 }

@@ -1,6 +1,13 @@
-import { FETCH_HOME_DED, FETCH_HOME_DEL, FETCH_HOME_TAG, FETCH_HOME_TAG_DEL, FETCH_HOME_ADD, FETCH_HOME_UPD } from '@/constants/actionTypes'
+import { FETCH_HOME_DED, FETCH_HOME_DEL, FETCH_HOME_TAG, FETCH_HOME_TAG_DEL, FETCH_HOME_ADD, FETCH_HOME_UPD, FETCH_HOME_PAGE } from '@/constants/actionTypes'
 import { get, post } from '@/utils/request'
 import api from '@/services/api'
+
+export function pageData (options) {
+  return {
+    type: FETCH_HOME_PAGE,
+    payload: post(api.page, options)
+  }
+}
 
 export function defaultData (options) {
   return {
