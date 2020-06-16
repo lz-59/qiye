@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Spin } from 'antd'
 import { connect } from 'react-redux'
 import { pageData } from '@/actions/home'
 import './styles.less'
@@ -17,7 +18,7 @@ function List (props) {
   const [scr, setScr] = useState(0)
   const [max, setMax] = useState(0)
   
- const scrollFn = (e) => {
+ const scrollFn = () => {
   setScr(document.documentElement.scrollTop)
   if(scr > max){
     setMax(scr)
@@ -27,7 +28,6 @@ function List (props) {
         pageData()
       }, 1000)
     }
-    
   }
  }
 
@@ -49,6 +49,7 @@ function List (props) {
             })
           }
         </div>
+        <div><Spin /></div>
     </div>
   )
 }
