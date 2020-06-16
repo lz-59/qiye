@@ -10,7 +10,6 @@ export default connect(state => ({
   pageData
 })(List)
 
-
 let id
 
 function List (props) {
