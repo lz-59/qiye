@@ -11,7 +11,7 @@ function Homes (props) {
   let [ visible, setVisible ] = useState(false)
   let [ bol, setBol ] = useState(false)
   let [ obj, setObj ] = useState({})
-  const { data, defaultData, delData, tagData, tags, tagDel, addData, updData } = props
+  const { data, defaultData, delData, tagData, tags, tagDel, addData, updData, ids } = props
 
   const handleOk = async data => {
     if(bol){
@@ -94,13 +94,14 @@ function Homes (props) {
   }
 
   const chk = (id) => {
-    tagDel(id);
+    tagDel(id)
   }
 
   const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
       tagData(selectedRows)
     },
+    selectedRowKeys: tags.map(v => v.id),//取消选中
     getCheckboxProps: record => ({
       name: record.name,
     }),
@@ -132,6 +133,7 @@ function Homes (props) {
 export default connect(state => ({
   data: state.home.data,
   tags: state.home.tags,
+  ids: state.home.ids,
 }), {
   defaultData,
   delData,

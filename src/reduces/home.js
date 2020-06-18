@@ -3,6 +3,7 @@ const defaultState = {
   data: [],
   tags: [],
   pages: [],
+  ids: '',
 }
 
 export default function login (state = defaultState, action) {
